@@ -38,12 +38,9 @@ public class Main {
                     System.out.println("Accelerated! Current Speed: " + newSpeed);
                 }
                 case 2 -> {
-                    if (bike.brake()) {
-                        speed = speed - 5;
-                        System.out.println("Braked! Current Speed: " + speed);
-                    } else {
-                        System.out.println("Brake is not working!");
-                    }
+                    int newSpeed = bike.brake(speed);
+                    speed = newSpeed;
+                    System.out.println("Braked! Current Speed: " + newSpeed);
                 }
                 case 3 -> {
                     if (bike.headlights()) {

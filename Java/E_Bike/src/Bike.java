@@ -34,34 +34,25 @@ public class Bike {
         hasPower = false;
     }
 
-    public boolean brake() {
+    public int brake(int speed) {
         if (hasPower) {
-            return true; 
-        }
-        return false; 
-    }
-
-    public boolean headlights() {
-        if (hasPower) {
-            return true;
-        }
-        return false;
-    }
-    
-    public int speed() {
-        if (hasPower) {
-            int speed = 0;
-            return speed;
+            int newSpeed = speed - 5;
+            if (newSpeed < 0) {
+                newSpeed = 0;
+            }
+            return newSpeed;
         }
         return 0;
     }
+    
     public int speedLimiter(int speed) {
-        if (hasPower) {
-            if (speed > 30) {
-                speed = 30; 
-            }
-            return speed;
+        if (speed > 30) {
+            return 30;
         }
-        return 0; 
+        return speed;
+    }
+
+    public boolean headlights() {
+        return true; 
     }
 }

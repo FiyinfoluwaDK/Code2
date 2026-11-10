@@ -12,7 +12,8 @@ public class ACTest {
         assertFalse(ac.powerCheck(false));
 
     }
-    @Test 
+
+    @Test
     public void testTemperatureRange() {
         AC ac = new AC();
 
@@ -20,7 +21,8 @@ public class ACTest {
         assertEquals(30, ac.temperatureRange(35));
         assertEquals(25, ac.temperatureRange(25));
     }
-    @Test 
+
+    @Test
     public void testIncreaseTemperature() {
         AC ac = new AC();
 
@@ -28,6 +30,7 @@ public class ACTest {
         assertEquals(30, ac.increaseTemperature(29));
         assertEquals(30, ac.increaseTemperature(30));
     }
+
     @Test
     public void testDecreaseTemperature() {
         AC ac = new AC();
@@ -36,7 +39,8 @@ public class ACTest {
         assertEquals(16, ac.decreaseTemperature(17));
         assertEquals(16, ac.decreaseTemperature(16));
     }
-    @Test 
+
+    @Test
     public void testDisplayTemperature() {
         AC ac = new AC();
 
@@ -44,5 +48,19 @@ public class ACTest {
         assertEquals(30, ac.displayTemperature(30));
         assertEquals(16, ac.displayTemperature(16));
     }
-}
 
+    @Test
+    public void upperTemperatureLimit() {
+        AC ac = new AC();
+
+        assertEquals(30, ac.increaseTemperature(30));
+    }
+
+    @Test
+    public void lowerTemperatureLimit() {
+        AC ac = new AC();
+
+        assertEquals(16, ac.decreaseTemperature(16));
+    }
+
+}

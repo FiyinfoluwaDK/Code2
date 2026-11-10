@@ -3,14 +3,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BikeTest {
-    
-    @Test 
+
+    @Test
     public void isTherePowerTest() {
         Bike bike = new Bike();
         assertTrue(bike.powerChecker());
     }
 
-    @Test 
+    @Test
     public void acceleratorTest() {
         Bike bike = new Bike();
         int gear = bike.gearSystem(15);
@@ -27,10 +27,9 @@ public class BikeTest {
         int speed2 = bike.speedLimiter(25);
         assertEquals(25, speed2);
     }
-    
 
     @Test
-    public void gearcheckerTest() {
+    public void automaticGearCheckerTest() {
         Bike bike = new Bike();
         int gear1 = bike.gearSystem(5);
         assertEquals(1, gear1);
@@ -40,6 +39,36 @@ public class BikeTest {
 
         int gear3 = bike.gearSystem(25);
         assertEquals(3, gear3);
-    } 
+    }
 
+    @Test
+    public void brakeTest() {
+        Bike bike = new Bike();
+        int speed = bike.brake(20);
+        assertEquals(15, speed);
+
+        int speed2 = bike.brake(10);
+        assertEquals(5, speed2);
+    }
+
+    @Test
+    public void brakeTest2() {
+        Bike bike = new Bike();
+        int speed = bike.brake(5);
+        assertEquals(0, speed);
+
+        int speed2 = bike.brake(0);
+        assertEquals(0, speed2);
+    }
+    @Test
+    public void powerOffTest() {
+        Bike bike = new Bike();
+        bike.powerOff();
+        assertFalse(bike.powerChecker());
+    }
+    @Test
+    public void headlightsTest() {
+        Bike bike = new Bike();
+        assertTrue(bike.headlights());
+    }
 }
