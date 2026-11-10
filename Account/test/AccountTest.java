@@ -16,34 +16,28 @@ public class AccountTest {
     @Test
     public void testIfBalanceRemainsZeroWhenWithdrawing2_000() {
         int balance = 0;
-        int result = accountApp.withdraw(balance, 2000);
+        int result = accountApp.withdraw(balance, 2000, 1234);
         assertEquals(0, result);
     }
 
     @Test
     public void testIfBalanceRemainsZeroWhenWithdrawingNegativeAmount() {
         int balance = 0;
-        int result = accountApp.withdraw(balance, -500);
+        int result = accountApp.withdraw(balance, -500, 1234);
         assertEquals(0, result);
     }
 
-    @Test 
+    @Test
     public void testIfBalanceIncreasesWhenDepositingPositiveAmount() {
         int balance = 1000;
         int result = accountApp.deposit(balance, 500);
         assertEquals(1500, result);
     }
 
-    @Test 
+    @Test
     public void testifpinIsValid() {
         int pin = 1234;
-        accountApp.makePin(pin);
         assertTrue(pin >= 1000 && pin <= 9999);
     }
-    
-    @Test 
-    public void ifAccountNumberIsValid() {
-        int accountNumber = 12345678;
-        assertTrue(accountNumber >= 10000000 && accountNumber <= 99999999);
-    }
+
 }
