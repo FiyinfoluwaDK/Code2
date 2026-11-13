@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: #ebf1ff;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: auto;
+}
+
+footer {
+    margin-top: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    min-height: 420px;
+}
+
+.result,.summary {
+    width: 50%;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom,
+                #7857ff,
+                #2e2be9);
+        color: white;
+        border-radius: 25px;
+    padding: 30px;
+}
+
+.result h1 {
+    font-size: 20px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.result h2 {
+    font-size: 28px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+.summary {
+    background-color: white;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.summary h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #303b5a;
+}
+
+.summary li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.score {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    background: linear-gradient(to bottom,
+            #4e21ca,
+            #2421ca00);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-number {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.score-total {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.8;
+    max-width: 230px;
+}
+
+.reaction {
+    background-color: #ff57571a;
+    color: #ff5757;
+}
+
+.memory {
+    background-color: #ffb01f1a;
+    color: #ffb01f;
+}
+
+.verbal {
+    background-color: #00bd911a;
+    color: #00bd91;
+}
+
+.visual {
+    background-color: #1125d41a;
+    color: #1125d4;
+}
+
+.category-score {
+    color: #303b5a;
+    font-weight: 700;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: #303b5a;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .result,
+    .summary {
+        width: 100%;
+    }
+
+}
